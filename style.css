@@ -38,7 +38,7 @@ h1{
 
 .split.left{
     left: 0;
-    background: url("/intel.jpg");
+    background: url("intel.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -54,7 +54,7 @@ h1{
 }
 .split.right{
     right: 0;
-    background: url("/ryzen.jpg");
+    background: url("ryzen.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;

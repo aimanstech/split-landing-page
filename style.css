@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Oswald', sans-serif;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+}
+
+h1{
+    font-size: 4rem;
+    color: white;
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    transform: translate(-50%,-50%);
+    white-space: nowrap;
+}
+
+
+.container{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    background: #3333;
+}
+
+.split{
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.split.left{
+    left: 0;
+    background: url("/intel.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.split.left::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 255, 0.637),rgba(20, 92, 116, 0.404));
+
+}
+.split.right{
+    right: 0;
+    background: url("/ryzen.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.split.right::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#ffa600a4,rgba(0, 0, 0, 0.678));
+}
+
+.btn{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    text-decoration: none;
+    color: white;
+    border: 2px solid white;
+    font-size: 1.5rem;
+    width: 15rem;
+    padding: 1.5rem;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.split.right .btn:hover{
+    background: white;
+    color: orange;
+}
+
+.split.left .btn:hover{
+    background: white;
+    color: blue;
+}
+
+
+
+/* adding hover effect */
+
+.hover-left .left{
+    width: 75%;
+}
+
+.hover-left .right{
+    width: 25%;
+}
+
+.hover-right .right{
+    width: 75%;
+}
+
+.hover-right .left{
+    width: 25%;
+}
+
+/* Effect  */
+
+.split.left, .split.left::before, .split.right, .split.right::before{
+    transition: all .8s ease-in-out;
+}
+
+@media (max-width:800px) {
+    h1{
+        font-size: 1.5rem;
+    }
+
+    .btn{
+        font-size: .8rem;
+        width: 10rem;
+    }
+}
